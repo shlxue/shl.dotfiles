@@ -1,0 +1,57 @@
+set nocompatible          " Disable vi‑mode compatibility
+filetype plugin indent on   " Enable filetype plugins & indenting
+syntax enable              " Turn syntax highlighting on
+
+" Charset – always UTF‑8
+set encoding=utf-8
+set termencoding=utf-8
+
+" ---------------------------------------------------------------
+" 2. UI & usability
+" ---------------------------------------------------------------
+set number relativenumber   " Show line numbers + relative numbers
+" set cursorline              " Highlight the current line
+set showcmd                 " Show commands in the last line
+set showmode                " Show vim mode (e.g., INSERT)
+set clipboard=unnamedplus   " Use macOS system clipboard
+
+" Terminal‑mouse support (works in iTerm2, Terminal.app)
+set mouse=a                 " Mouse on in all modes
+
+" Folding – keep everything folded at start
+set foldmethod=indent      " Fold by indentation level
+set foldlevelstart=99
+
+" Search behaviour
+set ignorecase              " Case‑insensitive by default
+set smartcase               " Override if there is a capital letter
+set hlsearch                " Highlight matches
+set incsearch               " Incremental search
+
+" Wrap handling – keep lines readable
+set linebreak
+set wrap
+
+" Performance tweaks for macOS terminals
+set lazyredraw             " Don’t redraw while executing macros
+set ttyfast                " Tell vim the terminal is fast
+
+" ---------------------------------------------------------------
+" 3. Editing niceties
+" ---------------------------------------------------------------
+set backspace=indent,eol,start    " Backspace over auto‑indentations
+set smarttab                       " Tab behaves intelligently
+set shiftwidth=2                   " Indent width (recommended for Python)
+set tabstop=2                      " Tab character width
+set expandtab                      " Convert tabs to spaces
+
+" Make the search bar persist after a hit
+set incsearch
+set nobackup      " 关闭普通备份
+set nowritebackup " 关闭写时备份
+set noswapfile    " 关闭交换文件
+set viminfo+=n
+
+" --- Leader & LocalLeader ------------------------------------
+let mapleader = "\<Space>"
+let maplocalleader = ","
